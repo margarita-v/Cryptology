@@ -1,6 +1,5 @@
 import sys
 
-from log import log
 from root_degree import root
 
 def diffie_hellman(q, m, a, b):
