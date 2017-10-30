@@ -1,4 +1,4 @@
-from phi import phi, phi_improved, isPrime
+from phi import phi, phi_improved
 from modular_inverse import modinv
 
 r, a = 66899179, 9467
@@ -14,4 +14,3 @@ def euler_brut(r, a):
 
 if __name__ == '__main__':
     print(rsa_key(r, a))
-    #print(euler_brut(r, a))
