@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# Найти секретный ключ абонента А
+
 from phi import phi, phi_improved
 from modular_inverse import modinv
 
