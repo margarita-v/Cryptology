@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 # Найти секретный ключ абонента А
+import sys
+sys.path.append('../')
 
-from phi import phi, phi_improved
-from modular_inverse import modinv
+from Utils.phi import phi, phi_improved
+from Utils.modular_inverse import modinv
 
 r, a = 66899179, 9467
 euler = int(phi_improved(r))

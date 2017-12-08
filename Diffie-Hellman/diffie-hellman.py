@@ -1,6 +1,7 @@
 import sys
+sys.path.append('../')
 
-from root_degree import root
+from Utils.root_degree import root
 
 def diffie_hellman(q, m, a, b):
     x = root(1, q**a, m)

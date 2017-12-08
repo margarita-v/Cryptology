@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 # Расшифровать сообщение m через k итераций
-from modular_inverse import modinv
-from phi import phi_improved
+import sys
+sys.path.append('../')
+
+from Utils.modular_inverse import modinv
+from Utils.phi import phi_improved
 
 def get_count(r, a, c):
     mult = c ** a

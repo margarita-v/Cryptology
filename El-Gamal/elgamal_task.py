@@ -1,5 +1,8 @@
 # Вычислить шифротекст и найти секретный ключ x
-from log import log
+import sys
+sys.path.append('../')
+
+from Utils.log import log
 
 def get_text(p, g, y, k, q):
     a = pow(g, k, p)

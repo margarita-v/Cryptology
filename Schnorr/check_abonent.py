@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 # Протокол аутентификации Шнорра (Schnorr)
 # Мы - абонент B. Проверить, что мы общаемся с абонентом A.
+import sys
+sys.path.append('../')
 
-from modular_inverse import modinv
-from log import log
+from Utils.modular_inverse import modinv
+from Utils.log import log
 
 def check_abonent(r, g, y, p, s, e):
     return r == (g**s * y ** e) % p
