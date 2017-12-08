@@ -1,11 +1,12 @@
 # a^x = b (mod c)
-# a, b, c is comand line arguments
+# a, b, c is command line arguments
 
 import sys
 
 def log(a, b, c):
     for i in range(1, c):
-        if ((a**i - b) % c == 0):
+        if (pow(a, i, c) == b):
+        #if ((a**i - b) % c == 0):
             return i
     return None
 

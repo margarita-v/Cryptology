@@ -1,11 +1,12 @@
 # x^a = b (mod c)
-# a, b, c is comand line arguments
+# a, b, c is command line arguments
 
 import sys
 
 def root(a, b, c):
     for i in range(1, c):
-        if ((i**a - b) % c == 0):
+        if ( pow(i, a, c) == b):
+        #if ((i**a - b) % c == 0):
             return i
     return None
 
