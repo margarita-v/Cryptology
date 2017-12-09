@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Проверить подлинность сообщения
 def check(p, g, y, q, r, s):
     return (y**r * r**s) % p == pow(g, q, p)

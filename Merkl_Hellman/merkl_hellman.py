@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Найти открыть ключ и зашифровать слово "why"
 
 def find_key(inc_list, q, r):

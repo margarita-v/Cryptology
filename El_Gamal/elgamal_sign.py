@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Подписать сообщение цифровой подписью
 import sys
 sys.path.append('../')

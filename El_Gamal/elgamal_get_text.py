@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Вычислить шифротекст и найти секретный ключ x
 import sys
 sys.path.append('../')
