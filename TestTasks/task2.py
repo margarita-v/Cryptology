@@ -9,7 +9,7 @@
 import sys
 sys.path.append('../')
 
-from El_Gamal.elgamal_task import get_text, find_key
+from El_Gamal.elgamal_get_text import get_text, find_key
 
 p, g, y = 29009, 17248, 22767
 k, q = 15078, 9998
