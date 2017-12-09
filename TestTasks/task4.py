@@ -9,4 +9,13 @@
 import sys
 sys.path.append('../')
 
+from El_Gamal.elgamal_check import check
 
+r, s = 3121, 1461
+p, g, y = 12197, 3280, 8156
+for i in range(1, p + 1):
+    # Сообщение подлинно. Нужно найти, для какого значения Q
+    # в заданном диапазоне выполняется условие проверки подлинности сообщения
+    if check(p, g, y, i, r, s):
+        print(i)
+        break
