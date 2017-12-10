@@ -2,6 +2,8 @@
 import fractions
 from math import sqrt
 
+from sympy.ntheory import factorint
+
 # Функция, возвращающая список делителей числа
 def get_dividers(n):
     result = []
@@ -22,6 +24,26 @@ def phi(n):
         if fractions.gcd(n, k) == 1:
             count += 1
     return count
+
+# Функция Эйлера (лучший алгоритм из представленных)
+def phi_new(n):
+    dividers = factorint(n)
+    if (len(dividers) == 1):
+        return n - 1
+    result = n
+    for key, value in dividers.items():
+        result *= get_multiplier(key)
+    return int(result)
+
+def phi_f(val):
+    res = val
+    i = 2
+    for i in range(2, val + 1):
+        if val % i == 0:
+            res *= 1 - 1 / i
+            while val % i == 0:
+                val /= i
+    return int(res)
 
 def phi_improved(n):
     dividers = get_dividers(n)
