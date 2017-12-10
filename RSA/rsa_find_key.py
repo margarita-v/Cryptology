@@ -4,13 +4,14 @@ import sys
 sys.path.append('../')
 
 from Utils.phi import phi, phi_improved
-from Utils.modular_inverse import modinv
+#from Utils.modular_inverse import modinv
+from Utils.inversion import inverse
 
 r, a = 66899179, 9467
 euler = int(phi_improved(r))
 
 def rsa_key(r, a):
-    return modinv(a, euler)
+    return inverse(a, euler)
 
 def euler_brut(r, a):
     for i in range(euler, 0, -1):

@@ -5,9 +5,10 @@ import sys
 sys.path.append('../')
 
 from Utils.modular_inverse import modinv
+from Utils.inversion import inverse
 
 def get_second_message(b1, b2, p, q1):
-    return ( q1 * b2 * modinv(b1, p) ) % p
+    return ( q1 * b2 * inverse(b1, p) ) % p
 
 if __name__ == '__main__':
     p = 54751

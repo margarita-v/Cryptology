@@ -4,7 +4,8 @@
 import sys
 sys.path.append('../')
 
-from Utils.modular_inverse import modinv
+from Utils.inversion import inverse
+#from Utils.modular_inverse import modinv
 from Utils.log import log
 
 def check_abonent(r, g, y, p, s, e):
@@ -23,9 +24,8 @@ if __name__ == '__main__':
     print(check_abonent(r, g, y, p, 1267, 155))
 
     # find secret key
-    inverse_elem = modinv(g, p)
-    print(inverse_elem)
+    inverse_elem = inverse(g, p)
+    key = log(inverse_elem, y, p)
+    print(key)
     # find a
-    a = log(g, r, p)
-    print(a)
-    #print( (s - a) * modinv(e, p))
+    # a = log(g, r, p)

@@ -15,7 +15,7 @@ def get_dividers(n):
 # в диапазоне от 1 до n.
 # 1 <= k <= n : gcd(n, k) = 1
 def phi(n):
-    if (len(get_dividers(n)) == 0):
+    if (is_prime(n)):
         return n - 1
     count = 0
     for k in range(1, n + 1):
@@ -25,15 +25,25 @@ def phi(n):
 
 def phi_improved(n):
     dividers = get_dividers(n)
-    if (len(dividers) == 0):
+    if (is_empty(dividers)):
         return n - 1
     # Находим делители числа n
     print(dividers)
     result = n
     # Проверяем, что делители простые, и находим значение функции Эйлера
     for div in dividers:
-        if (len(get_dividers(div[0])) == 0):
-            result *= (1 - 1/div[0])
-        if (len(get_dividers(div[1])) == 0):
-            result *= (1 - 1/div[1])
+        if (is_prime(div[0])):
+            result *= get_multiplier(div[0])
+        if (is_prime(div[1])):
+            result *= get_multiplier(div[1])
     return result
+
+# Функция, проверяющая, является ли число простым
+def is_prime(num):
+    return is_empty(get_dividers(num))
+
+def is_empty(dividers):
+    return len(dividers) == 0
+
+def get_multiplier(num):
+    return 1 - 1 / num

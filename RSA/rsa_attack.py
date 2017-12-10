@@ -3,9 +3,6 @@
 import sys
 sys.path.append('../')
 
-from Utils.modular_inverse import modinv
-from Utils.phi import phi_improved
-
 def get_count(r, a, c):
     mult = c ** a
     result = mult

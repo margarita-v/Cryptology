@@ -1,7 +1,4 @@
 # a^x = b (mod c)
-# a, b, c is command line arguments
-
-import sys
 
 def log(a, b, c):
     for i in range(1, c):
@@ -10,10 +7,7 @@ def log(a, b, c):
             return i
     return None
 
-if (__name__ == '__main__' and len(sys.argv) > 3):
-    a = int(sys.argv[1])
-    b = int(sys.argv[2])
-    c = int(sys.argv[3])
-
+if (__name__ == '__main__'):
+    a, b, c = 270, 342, 503
     print(log(a, b, c))
 
