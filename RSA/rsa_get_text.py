@@ -3,3 +3,9 @@
 
 m1, r, b, beta = 25963634, 71361259, 74671, 33289711
 print(pow(m1, beta, r))
+
+# Оптимизация вычислений
+beta1 = (beta - 1) // 10
+x = pow(m1, beta1, r)
+m = (x**10 * m1) % r
+print(m)

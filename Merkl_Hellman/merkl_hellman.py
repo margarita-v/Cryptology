@@ -17,6 +17,7 @@ def encrypt(message, key):
      #   m = format(char, 'b')
     print(list(format(25, 'b')))
 
+# Расшифровка сообщения
 def solve():
     w = [1, 2, 4, 9, 18, 35]
     q, r = 80, 29
@@ -33,14 +34,11 @@ def solve():
     m = [0 for i in range(k + 1)]
     for j in range(k + 1):
         for i in range(0, n):
-            if w[n - i] > s[j]:
-                matrix[j][n - i] = 0
-            else:
-                matrix[j][n - i] = 1
-            s[j] -= matrix[j][n - i] * w[n - i]
+            index = n - i
+            matrix[j][index] = 0 if w[index] > s[j] else 1
+            s[j] -= matrix[j][index] * w[index]
         for i in range(1, n + 1):
             m[j] += matrix[j][i] * 2**(n - i)
-
     print(m)
 
 if __name__ == '__main__':
