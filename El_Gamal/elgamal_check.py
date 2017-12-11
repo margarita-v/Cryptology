@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 # Проверить подлинность сообщения
+
+
 def check(p, g, y, q, r, s):
-    return (y**r * r**s) % p == pow(g, q, p)
+    return (y ** r * r ** s) % p == pow(g, q, p)
+
 
 if __name__ == '__main__':
     p, g, y = 337, 15, 303

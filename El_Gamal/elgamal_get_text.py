@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
 # Вычислить шифротекст и найти секретный ключ x
+
 import sys
 sys.path.append('../')
 
 from Utils.log import log
 
+
 def get_text(p, g, y, k, q):
     a = pow(g, k, p)
-    b = (q* y**k) % p
+    b = (q * y**k) % p
     return a, b
+
 
 def find_key(y, g, p):
     return log(g, y, p)
+
 
 if __name__ == '__main__':
     p, g, y = 23, 5, 14

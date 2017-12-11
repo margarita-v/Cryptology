@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 # Расшифровать сообщение m через k итераций
+
 import sys
 sys.path.append('../')
 
+
 def get_count(r, a, c):
     mult = c ** a
-    result = mult
     k = 1
     while pow(mult, k, r) != c:
         k += 1
     return k
+
 
 if __name__ == '__main__':
     r = 212887

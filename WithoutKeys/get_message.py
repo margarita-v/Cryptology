@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
-'''Условие задачи:
+"""Условие задачи:
     Для шифрования используется криптосистема без передачи ключей.
     Задан открытый ключ p, сообщение m зашифровано с помощью m1, m2, m3.
-    Найти m.'''
+    Найти m."""
 
 import sys
 sys.path.append('../')
 
 from Utils.phi import phi_new
 from Utils.log import log
+
 
 def get_message(m1, m2, m3, p):
     phi = phi_new(p)
@@ -18,7 +19,8 @@ def get_message(m1, m2, m3, p):
             return pow(m3, i, p)
     return None
 
-if (__name__ == '__main__'):
+
+if __name__ == '__main__':
     print('Контрольная работа, вариант 1:')
     p = 49559
     m1, m2, m3 = 11039, 31214, 14790

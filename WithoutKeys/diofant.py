@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
+from math import gcd
+
 import sys
 sys.path.append('../')
 
-from fractions import gcd
 
 # Найти решение (x0, y0) уравнения ax + by = c
 def get_solve(a, b, c):
@@ -20,11 +21,13 @@ def get_solve(a, b, c):
             return x, y
     return None
 
+
 # Найти m, зная следующие параметры:
 def get_solve2(r, a, b, m1, m2):
     x, y = get_solve(a, b, 1)
     return pow(m1, x, r) * pow(m2, y, r)
 
-if (__name__ == '__main__'):
+
+if __name__ == '__main__':
     a, b, c = 69, 273, 6
     print(get_solve(69, 273, 6))

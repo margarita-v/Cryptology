@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-# Найти открыть ключ и зашифровать слово "why"
+# Найти открытый ключ и зашифровать слово "why"
 
 import sys
 sys.path.append('../')
 
 from Utils.inversion import inverse
+
 
 def find_key(inc_list, q, r):
     result = []
@@ -12,10 +13,12 @@ def find_key(inc_list, q, r):
         result.append( (r*w) % q)
     return result
 
+
 def encrypt(message, key):
     #for char in message:
      #   m = format(char, 'b')
     print(list(format(25, 'b')))
+
 
 # Расшифровка сообщения
 def solve():
@@ -30,7 +33,7 @@ def solve():
     k = len(text) - 1 # Длина шифротекста
 
     inverse_elem = inverse(r, q)
-    s = [ i * inverse_elem % q for i in text]
+    s = [i * inverse_elem % q for i in text]
 
     matrix = [[0 for i in range(k + 1)] for j in range(n + 1)]
     m = [0 for i in range(k + 1)]
@@ -43,8 +46,7 @@ def solve():
             m[j] += matrix[j][i] * 2**(n - i)
     print(m)
 
+
 if __name__ == '__main__':
     key = find_key([2, 3, 7, 15, 31], 61, 17)
-    #print(key)
-    #print(encrypt("why", key))
     solve()
