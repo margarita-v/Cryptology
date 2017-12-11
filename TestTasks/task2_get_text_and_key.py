@@ -13,6 +13,11 @@ from El_Gamal.elgamal_get_text import get_text, find_key
 
 p, g, y = 29009, 17248, 22767
 k, q = 15078, 9998
+print(get_text(p, g, y, k, q))
+print(find_key(y, g, p))
 
+print("Контрольная работа, вариант 1:")
+(p, g, y) = (25679, 10025, 19120)
+(k, q) = (16780, 15309)
 print(get_text(p, g, y, k, q))
 print(find_key(y, g, p))
